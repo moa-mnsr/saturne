@@ -1,3 +1,8 @@
+// make sure all panels hide on load
+document.querySelectorAll('.typed-panel svg').forEach(panel => {
+    panel.style.display ='none';
+});
+
 // say what the background is that you want to change later
 const panels = document.querySelectorAll('.typed-panel svg');
 
