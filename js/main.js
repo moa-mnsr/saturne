@@ -1,4 +1,4 @@
-// make sure the channel is zero and text on the panel is not visible on load
+// make sure the channel is zero on load
 let channelNumber = 0;
 // say where to find the panels in the html so that that you can change their visibility later
 const panels = document.querySelectorAll('.typed-panel svg');
