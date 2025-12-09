@@ -79,19 +79,26 @@ nav {
   background-color: midnightblue;
 }
 
-
-
 .handwriting-layer {
   z-index: 2;
   position: relative;
   width: 100vh;
+  opacity: 1;
+  transition: opacity 4s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  filter: url(#dissolve);
 
-/* styling for testing */
+  /* styling for testing */
   border: 1px solid tomato;
 }
 
-.handwriting-layer svg {
-  width: 100vh;
-  height: auto;
+.handwriting-layer.hidden {
+  opacity: 0;
+  cursor: pointer;
 }
 
+.handwriting-layer object {
+  width: 100vh;
+  height: auto;
+  pointer-events: none;
+}

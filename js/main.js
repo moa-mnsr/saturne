@@ -4,6 +4,14 @@ let channelNumber = 0;
 const panels = document.querySelectorAll('.typed-panel svg');
 // find the buttons so you can call on them later
 const buttons = document.querySelectorAll('button');
+// selecting the background
+const handwritingLayer = document.querySelector('.handwriting-layer');
+
+// toggle visibility for background
+handwritingLayer.addEventListener('click', function() {
+  handwritingLayer.classList.toggle('hidden');
+});
+
 
 // set buttons to listen for clicks to each
 buttons.forEach((button, index) => {
