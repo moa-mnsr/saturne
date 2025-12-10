@@ -12,20 +12,24 @@ handwritingLayer.addEventListener('click', function() {
   handwritingLayer.classList.toggle('hidden');
 });
 
-
 // set buttons to listen for clicks to each
 buttons.forEach((button, index) => {
   button.addEventListener('click', function() {
     changeChannel(index+1);
-});
+  });
 });
 
 // say what it means to change channels and how it relates to button numbers
 function changeChannel(buttonNumber) {
   // make sure only one panel is visible at a time by turning the display off just in case
   panels.forEach(panel => {
-  panel.style.display = 'none';
-});
+    panel.style.display = 'none';
+  });
+
+  // Remove selected class from all buttons
+  buttons.forEach(button => {
+    button.classList.remove('selected');
+  });
 
   // logic of the channel switching
   // if channel is already set to the button's number
@@ -35,15 +39,16 @@ function changeChannel(buttonNumber) {
   // if it is any other channel or zero, it can freely change to the match the switch
   } else {
     channelNumber = buttonNumber;
+    // Add selected class to the clicked button
+    buttons[buttonNumber - 1].classList.add('selected');
   }
     
-// this is just here for debugging
+  // this is just here for debugging
   console.log('channelNumber is:', channelNumber);
 
-// if the channel is showing something, program can reverse the index+1 set in changeChannel
-// and count the panels with the channelNumber minus one, and set those to show
-if (channelNumber !==0) {
-  panels[channelNumber - 1].style.display = 'block';
-}
-
+  // if the channel is showing something, program can reverse the index+1 set in changeChannel
+  // and count the panels with the channelNumber minus one, and set those to show
+  if (channelNumber !== 0) {
+    panels[channelNumber - 1].style.display = 'block';
+  }
 }

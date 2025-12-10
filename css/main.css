@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow: hidden; /* Hide page scrollbar */
 }
 
 div.flexbox {
@@ -76,6 +77,8 @@ nav {
   z-index: 2;
   position: relative;
   width: 100vh;
+  height: 100vh; /* Set a fixed height */
+  overflow-y: auto; /* Add scrollbar inside this element */
   opacity: 1;
   transition: opacity 4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
@@ -94,3 +97,8 @@ nav {
   height: auto;
   pointer-events: none;
 }
+
+
+
+
+
