@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'GT Cinetype';
-  src: url('/fonts/GT-Cinetype-Bold-Trial.otf') format('opentype');
+  src: url('../fonts/GT-Cinetype-Bold-Trial.otf') format('opentype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'GT Cinetype';
-  src: url('/fonts/GT-Cinetype-Bold-Italic-Trial.otf') format('opentype');
+  src: url('../fonts/GT-Cinetype-Bold-Italic-Trial.otf') format('opentype');
   font-weight: bold;
   font-style: italic;
 }
