@@ -1,7 +1,7 @@
 // make sure the channel is zero on load
 let channelNumber = 0;
 // say where to find the panels in the html so that that you can change their visibility later
-const panels = document.querySelectorAll('.typed-panel svg');
+const panels = document.querySelectorAll('.typed-panel object');
 // find the buttons so you can call on them later
 const buttons = document.querySelectorAll('button');
 // selecting the background
