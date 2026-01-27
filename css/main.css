@@ -19,6 +19,9 @@ div.flexbox {
 }
 
 .typed-panel {
+
+  display: none;  /* Starts invisible */
+
   z-index: 1;
   min-height: 95vh;
 
