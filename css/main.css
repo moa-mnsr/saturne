@@ -1,21 +1,8 @@
-@font-face {
-  font-family: 'GT Cinetype';
-  src: url('../fonts/GT-Cinetype-Bold-Trial.otf') format('opentype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'GT Cinetype';
-  src: url('../fonts/GT-Cinetype-Bold-Italic-Trial.otf') format('opentype');
-  font-weight: bold;
-  font-style: italic;
-}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap'); /* Backup if link fails */
 
 html, body {
-  height: 100%;
   margin: 0;
-  overflow: hidden; /* Hide page scrollbar */
+  background-color: snow;
 }
 
 div.flexbox {
@@ -24,95 +11,111 @@ div.flexbox {
   background-color: transparent; /* No grey behind the white panel */
 }
 
+.typed-wrapper {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+
+}
+
 .typed-panel {
-  width: 100vh; 
-  height: 100vh;
   z-index: 1;
-  position: fixed;
-  top: 0;
+  min-height: 95vh;
+
+  inset: 0; 
+
+}
+
+.button-panel button:nth-child(1):hover {
+  background: lime !important;
+}
+
+.typed-panel p {
+  font-family: 'EB Garamond', serif;
+  margin: 0 0 1.2em 0; /* Small gap between stanzas */
+  
+  position: absolute;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-
-  /* styling for testing */
-  background-color: white; /* Clean white for contrast with black text */
-  border: 1px solid rgba(160, 150, 130, 0.25);
+  transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+  padding: 10px; /* Lighter per stanza */
+  box-sizing: border-box;
+  font-size: 7vw;
+  line-height: 1.1;
 }
 
-.typed-panel object { 
-  display: none;
-  width: 100%;
-  height: 100%;
+
+p {
+  /*testing*/
+  background-color: coral;
 }
 
-nav { 
-  width: 50vw;
-  height: 100vh;
+.button-panel { 
+  z-index: 3;
+  width: 100vw;
   position: fixed;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.left-button-panel {
   left: 0;
-  /* styling for testing */
-  background-color: rgba(150, 140, 120, 0.2);
-}
+  bottom: 0;
 
-.right-button-panel {
-  right: 0;
-  /* styling for testing */
-  background-color: rgba(150, 140, 120, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr;  
+  gap: 10px; 
+  padding: 0 10px;
+  box-sizing: border-box;
+
+
+  /*testing*/
+  background-color: teal;
+  border: solid 1px red;
 }
 
 .button {
-  height: 50%;
-  /* to override button defaults: */
-  padding: 0;
-  margin: 0;
-  font: inherit;
-
+  height: 60px; /* Fits nicely in 80px nav with padding */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; /* Visible text */
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+  
   /* styling for testing */
   border: 1px solid rgba(140, 130, 110, 0.2);
-  background-color: rgba(145, 135, 115, 0.15);
+  background-color: limegreen;
 }
 
 .button:hover {
   cursor: pointer;
   /* styling for testing */
-  background-color: rgba(130, 120, 100, 0.25);
+  background-color: olivedrab;
 }
 
 .button:active, .button.selected {
-  background-color: rgba(120, 110, 90, 0.3);
+  background-color: olive;
 }
 
 .handwriting-layer {
+  position: fixed;
+  inset: 0;
   z-index: 2;
-  position: relative;
-  width: 100vh;
-  height: 100vh; /* Set a fixed height */
-  overflow-y: auto; /* Add scrollbar inside this element */
-  opacity: 1;
-  transition: opacity 4s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
+  
+  width: 100vw;
+  height: 100vh; /* or calc(100vh - 80px) to account for nav */
+  
+  overflow-y: scroll;
+  overflow-x: hidden; 
+  box-sizing: border-box;
+  }
 
-  /* styling for testing */
-  border: 1px solid rgba(160, 140, 120, 0.15);
-}
-
-.handwriting-layer.hidden {
-  opacity: 0;
-  cursor: pointer;
-}
 
 .handwriting-layer object {
-  width: 100vh;
-  height: auto;
-  pointer-events: none;
+  display: block;
+    /* styling for testing */
+  border: 1px solid red;
+
 }
-
-
-
-
 
