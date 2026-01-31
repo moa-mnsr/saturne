@@ -78,17 +78,17 @@ p {
 
   /* color styling ..can be for testing */
   border: 1px solid black;
-  background-color: #FAE6D2;
+  background-color: #FAF4E5;
 }
 
 .button:hover {
   cursor: pointer;
   /* styling for testing */
-  background-color: #d3b69c;
+  background-color: #f7eacc;
 }
 
 .button:active, .button.selected {
-  background-color: #b4937b;
+  background-color: #c5bdb8;
 }
 
 .handwriting-layer {
