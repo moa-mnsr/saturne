@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap'); /* Backup if link fails */
 
 html, body {
-  margin: 0;
-  background-color: snow;
+  background-color: beige;
 }
 
 div.flexbox {
@@ -12,10 +11,12 @@ div.flexbox {
 }
 
 .typed-wrapper {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90vh;
 }
 
 .typed-panel {
@@ -57,7 +58,7 @@ p {
   width: 100vw;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 5vh;
 
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -103,9 +104,7 @@ p {
   inset: 0;
   z-index: 2;
   
-  width: 100vw;
-  height: 100vh; /* or calc(100vh - 80px) to account for nav */
-  
+  width: 100vw;  
   overflow-y: scroll;
   overflow-x: hidden; 
   box-sizing: border-box;
@@ -113,9 +112,10 @@ p {
 
 
 .handwriting-layer object {
-  display: block;
+  display: block;  
     /* styling for testing */
-  border: 1px solid red;
+  border: 3px dotted red;
+  
 
 }
 
