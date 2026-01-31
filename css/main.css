@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap'); /* Backup if link fails */
 
 html, body {
-  background-color: beige;
+  background-color: whitesmoke;
 }
 
 div.flexbox {
@@ -27,9 +27,6 @@ div.flexbox {
 
 }
 
-.button-panel button:nth-child(1):hover {
-  background: lime !important;
-}
 
 .typed-panel p {
   font-family: 'EB Garamond', serif;
@@ -50,7 +47,7 @@ div.flexbox {
 
 p {
   /*testing*/
-  background-color: coral;
+	border: 1px solid coral;
 }
 
 .button-panel { 
@@ -69,34 +66,29 @@ p {
 
 
   /*testing*/
-  background-color: teal;
   border: solid 1px red;
 }
 
 .button {
-  height: 60px; /* Fits nicely in 80px nav with padding */
+  height: 60px; 
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: white; /* Visible text */
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-  
-  /* styling for testing */
-  border: 1px solid rgba(140, 130, 110, 0.2);
-  background-color: limegreen;
+
+  /* color styling ..can be for testing */
+  border: 1px solid black;
+  background-color: #FAE6D2;
 }
 
 .button:hover {
   cursor: pointer;
   /* styling for testing */
-  background-color: olivedrab;
+  background-color: #d3b69c;
 }
 
 .button:active, .button.selected {
-  background-color: olive;
+  background-color: #b4937b;
 }
 
 .handwriting-layer {
