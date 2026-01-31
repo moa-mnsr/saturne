@@ -1,9 +1,17 @@
 // make sure the channel is zero on load
 let channelNumber = 0;
-// say where to find the panels in the html so that that you can change their visibility later
+// say where to find the panels in the html so that that you can change their display later
 const panels = document.querySelectorAll('.typed-panel');
 // find the buttons so you can call on them later
 const buttons = document.querySelectorAll('.button-panel button');
+  
+// a function that makes sure only one panel is visible at a time by turning the display off just in case
+function hideAllPanels() {
+  panels.forEach(panel => panel.style.display = 'none');
+}
+
+// on load...
+hideAllPanels();
 
 // set buttons to listen for clicks to each
 buttons.forEach((button, index) => {
@@ -12,17 +20,16 @@ buttons.forEach((button, index) => {
   });
 });
 
+// function to remove selected class from all buttons
+function resetButtons() {
+  buttons.forEach(button => button.classList.remove('selected'));
+}
+
 // say what it means to change channels and how it relates to button numbers
 function changeChannel(buttonNumber) {
-  // make sure only one panel is visible at a time by turning the display off just in case
-  panels.forEach(panel => {
-    panel.style.display = 'none';
-  });
 
-  // Remove selected class from all buttons
-  buttons.forEach(button => {
-    button.classList.remove('selected');
-  });
+  hideAllPanels();
+  resetButtons();
 
   // logic of the channel switching
   // if channel is already set to the button's number
