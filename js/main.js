@@ -58,3 +58,30 @@ function changeChannel(buttonNumber) {
     showActivePanel();
   }
 }
+
+
+// starting point for animation
+
+
+// Store the "previous" scroll ratio.
+let previousScrollRatio = 0;
+
+// Get a reference to the relevant div.
+const handwritingLayerDiv = document.getElementsByClassName("handwriting-layer")[0];
+
+// When the user scrolls...
+handwritingLayerDiv.onscroll = (event) => {
+
+  // Calculate the scrolled amount between 0.0 and 1.0
+  const scrollRatio = handwritingLayerDiv.scrollTop
+    / handwritingLayerDiv.scrollHeight;
+
+  // Check if a threshold was passed.
+  if ((previousScrollRatio < 0.5) && (scrollRatio >= 0.5)) {
+    console.log("Passed 0.5");
+  }
+
+  // Store the value for next time.
+  previousScrollRatio = scrollRatio;
+};
+
