@@ -23,15 +23,23 @@ handwritingLayerDiv.onscroll = (event) => {
 
 // check where an individual svg is on the screen right now
 
-// First animation (top) .. this is just to test
+// First animation (top) .. this is just to test where it is
 const entangledPosition = entangled.getBoundingClientRect();
 console.log('entangled top:', entangledPosition.top);
 
-// ..coupled with the bottom one that triggers its release
+// ..coupled with the bottom one that will eventually triggers its release
 const wastePosition = waste.getBoundingClientRect();
 console.log('waste bottom:', wastePosition.bottom);
 
+// now that we can log where it is at all, we can decide on a point at which we want it to catch on the screen and get stuck there for a bit
 
+if (entangledPosition.top <= -62) {
+  console.log('entangled is caught!');
+}
+
+if (wastePosition.bottom <= 1582.5) {
+  console.log('waste is caught!');
+}
   // commenting out log so that console ist flooded for now
 
   // Check if a threshold was passed.
@@ -41,4 +49,4 @@ console.log('waste bottom:', wastePosition.bottom);
 
   // Store the value for next time.
  // previousScrollRatio = scrollRatio;
-  //};
+  };
