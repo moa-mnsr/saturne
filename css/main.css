@@ -1,1 +1,257 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');* {  touch-action: manipulation; }html, body {  background-color: #fbfbfb;  color: #040404;}div.flexbox {  display: flex;  justify-content: center;  background-color: transparent; }.typed-wrapper {	position: relative;	overflow: hidden;	display: flex;	flex-direction: column;	justify-content: center;	min-height: 100dvh;}.typed-panel {  z-index: 1;   position: absolute;  top: 45%;  left: 50%;  transform: translate(-50%, -50%); width: 65%;}/*#panel-1 { width: 60%;}#panel-2 { width: 65%;}#panel-3 { width: 80%;}#panel-4 { width: 75%;}*/.italic {  font-style: italic;}.typed-panel p {  font-family: 'EB Garamond', serif;  margin: 0 0 .8em 0;   box-sizing: border-box;  font-size: 7vw;  line-height: 1.1;  /*testing	border: 2px solid coral;*/}.button-panel {  z-index: 3;  width: 100vw;  position: fixed;  left: 0;  bottom: 4vh;  display: flex;  /* gap: 2rem; */  padding: 0 2rem;  box-sizing: border-box;  justify-content: space-around;  /*testing  border: solid 1px red;*/}.button {  height: 3.5rem;  width: 12rem;  border-radius: 3px;  display: flex;  align-items: center;  justify-content: center;  border: 1.5px solid #040404;  background-color: #f2f2f2;}.button:hover {  cursor: pointer;  /* styling for testing   background-color: #f7eacc;*/}.button:active, .button.selected {  background-color: #F4D59F;}.handwriting-layer {  position: fixed;  inset: 0;  z-index: 2;    width: 100vw;    overflow-y: scroll;  overflow-x: hidden;   box-sizing: border-box;  }.handwriting-layer img {  display: block;      /* styling for testing   border: 3px dotted red;*/}  /* styling for specific SVGs to move from center;*/  /* frame 1 */.sticker-first {  border: 3px solid teal;  min-height: 300vh;}#path {  transform: translate(-7vw, -14vh);}#enduring {    transform: translate(7vw, -35vh); }#finale {  transform: translate(0, -56vh);}/* frame 2 */ #hardware {  transform: translate(12vw, -61vh);} #entangled {  transform: translate(-10vw, -65vh);  position: sticky;  top: 50vh;  z-index: 5;  border: 1px solid red;} #obs {  transform: translate(-11vw, -50vh);  position: sticky;  top: 60vh;  z-index: 5;  border: 1px solid red;}#anything {  transform: translate(0, -50vh);}/* frame 3 */ #living {    transform: translate(-10vw, -44vh); }#waste {  transform: translate(10vw, -52vh);   position: sticky;  top: -42vh;  z-index: 5;  border: 1px solid red;}#collapse {  transform: translate(0, -40vh);}#cake {  transform: translate(0, -16vh);}/* frame 4 *//* placeholder for svg at (0,0) */ #changed {  transform: translate(-10vw, 0);}#actual {  transform: translate(8vw, 0);}/* frame 5 /* /* placeholder for svg at (0,0) */ #relied {  transform: translate(-11vw, 0);}/* placeholder for svg at (0,0) */#homegrown {  transform: translate(27vw, 0);}/* placeholder for svg at (0,0) */#undo {  transform: translate(0, 0);}/* frame 6 /* /* placeholder for svg at (0,0) */ #blob {  transform: translate(-8vw, 0);}/* placeholder for svg at (0,0) */#endings-careful {  transform: translate(3vw, 0);} #endings-loss {  transform: translate(-2vw, 0);}#endings-as {  padding: 16vh 0 50vh 0;}
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap');
+
+* {
+  touch-action: manipulation; 
+}
+
+html, body {
+  background-color: #fbfbfb;
+  color: #040404;
+}
+
+div.flexbox {
+  display: flex;
+  justify-content: center;
+  background-color: transparent; 
+}
+
+.typed-wrapper {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 100dvh;
+}
+
+.typed-panel {
+  z-index: 1;
+   position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ width: 65%;
+}
+
+/*
+#panel-1 {
+ width: 60%;
+}
+
+#panel-2 {
+ width: 65%;
+}
+
+#panel-3 {
+ width: 80%;
+}
+
+#panel-4 {
+ width: 75%;
+}
+*/
+
+.italic {
+  font-style: italic;
+}
+
+.typed-panel p {
+  font-family: 'EB Garamond', serif;
+  margin: 0 0 .8em 0; 
+
+  box-sizing: border-box;
+  font-size: 7vw;
+  line-height: 1.1;
+
+  /*testing
+	border: 2px solid coral;*/
+}
+
+.button-panel {
+  z-index: 3;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  bottom: 4vh;
+  display: flex;
+  /* gap: 2rem; */
+  padding: 0 2rem;
+  box-sizing: border-box;
+  justify-content: space-around;
+
+  /*testing
+  border: solid 1px red;*/
+}
+
+.button {
+  height: 3.5rem;
+  width: 12rem;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #BC9F6D3B;
+}
+
+.button:hover {
+  cursor: pointer;
+  /* styling for testing 
+  background-color: #f7eacc;*/
+}
+
+.button:active, .button.selected {
+  background-color: #F4D59F;
+}
+
+.handwriting-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+  
+  width: 100vw;  
+  overflow-y: scroll;
+  overflow-x: hidden; 
+  box-sizing: border-box;
+  }
+
+
+.handwriting-layer img {
+  display: block;  
+    /* styling for testing 
+  border: 3px dotted red;*/
+
+}
+
+  /* styling for specific SVGs to move from center;*/
+
+  /* frame 1 */
+
+.sticker-first {
+  border: 3px solid teal;
+  min-height: 300vh;
+}
+
+#path {
+  transform: translate(-7vw, -14vh);
+}
+
+#enduring {
+    transform: translate(7vw, -35vh);
+ }
+
+#finale {
+  transform: translate(0, -56vh);
+}
+
+/* frame 2 */
+
+
+ #hardware {
+  transform: translate(12vw, -61vh);
+}
+
+ #entangled {
+  transform: translate(-10vw, -65vh);
+  position: sticky;
+  top: 50vh;
+  /*border: 1px solid red;*/
+  z-index: 5;*/
+ 
+}
+
+ #obs {
+  transform: translate(-11vw, -50vh);
+}
+
+
+#anything {
+  transform: translate(0, -50vh);
+}
+
+/* frame 3 */
+
+ #living {
+    transform: translate(-10vw, -44vh);
+ }
+
+
+#waste {
+  transform: translate(10vw, -52vh);
+  position: sticky;
+  top: 94vh;
+  z-index: 5;
+  /*border: 1px solid red;*/
+}
+
+#collapse {
+  transform: translate(0, -40vh);
+}
+
+#cake {
+  transform: translate(0, -16vh);
+}
+
+/* frame 4 */
+
+#terminal {
+  position: sticky;
+  top: 60vh;
+  z-index: 5;
+  border: 1px solid red;
+}
+
+ #changed {
+  transform: translate(-10vw, 0);
+}
+
+#actual {
+  transform: translate(8vw, 0);
+}
+
+/* frame 5 /* 
+/* placeholder for svg at (0,0) */
+
+ #relied {
+  transform: translate(-11vw, 0);
+}
+
+/* placeholder for svg at (0,0) */
+
+#homegrown {
+  transform: translate(27vw, 0);
+}
+
+/* placeholder for svg at (0,0) */
+
+#undo {
+  transform: translate(0, 0);
+}
+
+/* frame 6 /* 
+
+/* placeholder for svg at (0,0) */
+
+ #blob {
+  transform: translate(-8vw, 0);
+}
+
+/* placeholder for svg at (0,0) */
+
+#endings-careful {
+  transform: translate(3vw, 0);
+}
+
+ #endings-loss {
+  transform: translate(-2vw, 0);
+}
+
+#endings-as {
+  padding: 16vh 0 50vh 0;
+}
+
+
+
+
+
+
+
