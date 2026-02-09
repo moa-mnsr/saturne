@@ -90,7 +90,7 @@ div.flexbox {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #BC9F6D3B;
+  background-color: #E4DED1;
 }
 
 .button:hover {
@@ -100,7 +100,7 @@ div.flexbox {
 }
 
 .button:active, .button.selected {
-  background-color: #F4D59F;
+  background-color: #CEA662;
 }
 
 .handwriting-layer {
@@ -189,13 +189,17 @@ div.flexbox {
 
 #cake {
   transform: translate(0, -16vh);
+  position: sticky;
+  top: 30vh;
+  /*border: 1px solid red;*/
+  z-index: 5;
 }
 
 /* frame 4 */
 
 #terminal {
   position: sticky;
-  top: 60vh;
+  top: 30vh;
   z-index: 5;
   border: 1px solid red;
 }
@@ -206,7 +210,11 @@ div.flexbox {
 
 #actual {
   transform: translate(8vw, 0);
+  position: sticky;
+  top: -12vh;
+  z-index: 5;
 }
+
 
 /* frame 5 /* 
 /* placeholder for svg at (0,0) */
@@ -219,6 +227,9 @@ div.flexbox {
 
 #homegrown {
   transform: translate(27vw, 0);
+  position: sticky;
+  top: 13vh;
+  z-index: 5;
 }
 
 /* placeholder for svg at (0,0) */
@@ -227,22 +238,38 @@ div.flexbox {
   transform: translate(0, 0);
 }
 
-/* frame 6 /* 
+/* frame 6 */ 
 
-/* placeholder for svg at (0,0) */
+#multiple {
+  /* position is at (0,0) */
+  position: sticky;
+  top: -13vh;
+  z-index: 5;
+}
 
  #blob {
   transform: translate(-8vw, 0);
 }
 
-/* placeholder for svg at (0,0) */
+#spectacle {
+/* position is at (0,0) */
+ position: sticky;
+  top: -16vh;
+  z-index: 5;
+}
 
 #endings-careful {
   transform: translate(3vw, 0);
+  position: sticky;
+  top: 17vh;
+  z-index: 5;
 }
 
  #endings-loss {
   transform: translate(-2vw, 0);
+   position: sticky;
+  top: 50vh;
+  z-index: 5;
 }
 
 #endings-as {
