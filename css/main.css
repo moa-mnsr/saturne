@@ -102,7 +102,10 @@ div.flexbox {
 
 .button:active, .button.selected {
   background-color: #CEA662;
+	box-shadow: none;
+	border: 1px solid #66584775;
 }
+
 
 .handwriting-layer {
   position: fixed;
@@ -156,8 +159,7 @@ div.flexbox {
   position: sticky;
   top: 50vh;
   /*border: 1px solid red;*/
-  z-index: 5;*/
- 
+  z-index: 5;
 }
 
  #obs {
@@ -217,7 +219,7 @@ div.flexbox {
 }
 
 
-/* frame 5 /* 
+/* frame 5 */
 /* placeholder for svg at (0,0) */
 
  #relied {
@@ -276,10 +278,3 @@ div.flexbox {
 #endings-as {
   padding: 16vh 0 50vh 0;
 }
-
-
-
-
-
-
-
