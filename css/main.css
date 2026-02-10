@@ -92,6 +92,7 @@ div.flexbox {
   justify-content: center;
   background-color: #E4DED1;
   box-shadow: .15em .25em 0.5em .15em #3E393169;
+  border: 1px solid #66584700;
 }
 
 .button:hover {
