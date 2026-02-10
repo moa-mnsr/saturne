@@ -68,13 +68,17 @@ div.flexbox {
 }
 
 .button-panel {
+
+    height: 1.5rem;  /* smaller */
+    width: 100vw;     /* fits phone */
+    font-size: .85rem;
+
   z-index: 3;
-  width: 100vw;
   position: fixed;
   left: 0;
   bottom: 4vh;
   display: flex;
-  /* gap: 2rem; */
+  gap: 1rem;
   padding: 0 2rem;
   box-sizing: border-box;
   justify-content: space-around;
@@ -84,7 +88,6 @@ div.flexbox {
 }
 
 .button {
-  height: 3.5rem;
   width: 12rem;
   border-radius: 3px;
   display: flex;
@@ -278,4 +281,39 @@ div.flexbox {
 
 #endings-as {
   padding: 16vh 0 50vh 0;
+}
+
+
+/* NEW: Default - show desktop, hide mobile */
+.desktop-site {
+  display: block;
+}
+
+.mobile-screen {
+  display: none; /* hidden by default */
+  position: fixed;
+  inset: 0; /* full viewport */
+  z-index: 999; /* above everything */
+  background: #fbfbfb; /* match your bg */
+}
+
+/* NEW: On mobile, hide desktop & show mobile screen */
+@media screen and (max-width: 768px) { /* adjust breakpoint as needed */
+  .desktop-site {
+    display: none !important;
+  }
+  
+  .mobile-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .mobile-content {
+    max-width: 100%;
+    padding: 2rem;
+    text-align: center;
+  }
 }
