@@ -60,7 +60,7 @@ div.flexbox {
   margin: 0 0 .8em 0; 
 
   box-sizing: border-box;
-  font-size: 7vw;
+font-size: clamp(2rem, 7vw, 3.5rem);
   line-height: 1.1;
 
   /*testing
@@ -298,7 +298,7 @@ div.flexbox {
 }
 
 /* NEW: On mobile, hide desktop & show mobile screen */
-@media screen and (max-width: 768px) { /* adjust breakpoint as needed */
+@media screen and (min-width: 481px) { /* adjust breakpoint as needed */
   .desktop-site {
     display: none !important;
   }
@@ -315,5 +315,9 @@ div.flexbox {
     max-width: 100%;
     padding: 2rem;
     text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-size: 4vw;
+    font-style: italic;
+
   }
 }
