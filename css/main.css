@@ -261,22 +261,23 @@ font-size: clamp(1.5rem, 7vw, 3.5rem);
 #spectacle {
 /* position is at (0,0) */
  position: sticky;
-  top: -16vh;
+  top: -21vh;
   z-index: 5;
 }
 
 #endings-careful {
   transform: translate(3vw, 0);
   position: sticky;
-  top: 17vh;
+  top: 9vh;
   z-index: 5;
 }
 
- #endings-loss {
-  transform: translate(-2vw, 0);
-   position: sticky;
-  top: 50vh;
-  z-index: 5;
+#endings-loss {
+	transform: translate(-2vw, 0);
+	position: sticky;
+	top: 6vh;
+	z-index: 5;
+	padding: 5rem 0 0 0;
 }
 
 #endings-as {
