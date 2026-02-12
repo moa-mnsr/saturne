@@ -60,7 +60,7 @@ div.flexbox {
   margin: 0 0 .8em 0; 
 
   box-sizing: border-box;
-font-size: clamp(2rem, 7vw, 3.5rem);
+font-size: clamp(1.5rem, 7vw, 3.5rem);
   line-height: 1.1;
 
   /*testing
