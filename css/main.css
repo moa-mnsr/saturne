@@ -318,7 +318,7 @@ div.flexbox {
   }
 
   .button-panel {
-    height: 2.5rem;
+    height: 2.25rem;
     width: 100dvw;
     font-size: .85rem;
     z-index: 3;
@@ -326,7 +326,7 @@ div.flexbox {
     left: 0;
     bottom: 6vh;
     display: flex;
-    gap: 8rem;
+    gap: 5dvw;
     box-sizing: border-box;
     justify-content: center;
   }
